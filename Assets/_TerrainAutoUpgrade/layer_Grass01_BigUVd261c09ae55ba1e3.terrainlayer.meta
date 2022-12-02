@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 20bcb0861c93948bfa3db321bebf9394
+=======
+guid: aa036f001f936f84e89b089ddd950934
+>>>>>>> origin/lisa-szene
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 8574412962073106934
