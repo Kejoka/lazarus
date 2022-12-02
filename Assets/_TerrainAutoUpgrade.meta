@@ -1,9 +1,13 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: 41b90afa1ca1441b5a44f4a2ea178abf
 =======
 guid: 1813dc4b34e6d3e4b9212888f8f28be9
 >>>>>>> origin/lisa-szene
+=======
+guid: 1813dc4b34e6d3e4b9212888f8f28be9
+>>>>>>> lisa-szene
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

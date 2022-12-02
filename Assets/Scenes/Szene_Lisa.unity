@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
+<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.5994208, g: 0.59975797, b: 0.5995272, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.59937525, g: 0.5997512, b: 0.59948856, a: 1}
+>>>>>>> lisa-szene
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -665,7 +669,11 @@ Terrain:
   m_GameObject: {fileID: 1176034721}
   m_Enabled: 1
   serializedVersion: 6
+<<<<<<< HEAD
   m_TerrainData: {fileID: 0}
+=======
+  m_TerrainData: {fileID: 15600000, guid: 0b2cdb918bc4a604297c6ff2271f1555, type: 2}
+>>>>>>> lisa-szene
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
@@ -749,7 +757,11 @@ Terrain:
   m_GameObject: {fileID: 1704870002}
   m_Enabled: 1
   serializedVersion: 6
+<<<<<<< HEAD
   m_TerrainData: {fileID: 0}
+=======
+  m_TerrainData: {fileID: 15600000, guid: 9166cced2241b0e478dc23c2f3fbb901, type: 2}
+>>>>>>> lisa-szene
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
