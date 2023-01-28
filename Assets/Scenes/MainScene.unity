@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.10144256, g: 0.28835914, b: 0.53765225, a: 1}
+  m_IndirectSpecularColor: {r: 0.10148008, g: 0.28847134, b: 0.5377779, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -693,6 +693,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400010, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+      propertyPath: Acceleration
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400010, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: SnapRotation
       value: 0
       objectReference: {fileID: 0}
@@ -707,6 +711,10 @@ PrefabInstance:
     - target: {fileID: 14300000, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_Radius
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14300000, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 14300000, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_SlopeLimit
@@ -885,7 +893,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 1
+  m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &316017472
@@ -974,6 +982,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400008, guid: 74c4d2f25effb1341bf6058acf008695,
     type: 3}
   m_PrefabInstance: {fileID: 316017472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &364279872 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4188412984752900, guid: ce816f2e6abb0504092c23ed9b970dfd,
+    type: 3}
+  m_PrefabInstance: {fileID: 214153848}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &392206832
 PrefabInstance:
@@ -2534,6 +2548,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!4 &994878979 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4471613377008970, guid: ce816f2e6abb0504092c23ed9b970dfd,
+    type: 3}
+  m_PrefabInstance: {fileID: 214153848}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1077645160
 GameObject:
   m_ObjectHideFlags: 0
@@ -3180,7 +3200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1229718744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4753,7 +4773,7 @@ GameObject:
   - component: {fileID: 1833697573}
   - component: {fileID: 1833697572}
   - component: {fileID: 1833697571}
-  - component: {fileID: 1833697570}
+  - component: {fileID: 1833697578}
   m_Layer: 0
   m_Name: Teleportation
   m_TagString: Untagged
@@ -4776,18 +4796,6 @@ Transform:
   m_Father: {fileID: 214153854}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1833697570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1833697568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39fbe3faa8f659944b47b2bb36927a5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1833697571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4829,7 +4837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70bc4ab8bfd254f42902a4d602fef956, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 100
+  Range: 10
 --- !u!114 &1833697574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4860,8 +4868,8 @@ MonoBehaviour:
   AimButton: 268435456
   TeleportButton: 268435456
   FastTeleport: 0
-  LeftHand: {fileID: 0}
-  RightHand: {fileID: 0}
+  LeftHand: {fileID: 364279872}
+  RightHand: {fileID: 994878979}
   InputMode: 1
   AimingController: 1
   CapacitiveAimAndTeleportButton: 2
@@ -4891,8 +4899,8 @@ MonoBehaviour:
   TeleportDestinationLayer: 0
   AimCollisionType: 0
   UseCharacterCollisionData: 0
-  AimCollisionRadius: 0
-  AimCollisionHeight: 0
+  AimCollisionRadius: 0.1
+  AimCollisionHeight: 0.1
 --- !u!114 &1833697577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4908,6 +4916,53 @@ MonoBehaviour:
   CameraRig: {fileID: 214153855}
   CharacterController: {fileID: 214153857}
   PlayerController: {fileID: 214153856}
+--- !u!114 &1833697578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833697568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65ac96eeca5eff442ba798f7bfc4f002, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransitionDuration: 0.5
+  TeleportDelay: 0.5
+  FadeLevels:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1837786353
 PrefabInstance:
   m_ObjectHideFlags: 0
