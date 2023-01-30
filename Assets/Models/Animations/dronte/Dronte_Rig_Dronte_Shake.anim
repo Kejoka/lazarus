@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Dronte_Shake
+  m_Name: Dronte_Rig_Dronte_Shake
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -5039,7 +5039,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0.46255964, y: 0.12891488, z: 0.31149235, w: 0.81999516}
+        value: {x: 0.46255967, y: 0.12891491, z: 0.3114923, w: 0.81999516}
         inSlope: {x: 0, y: 0, z: 0, w: 0}
         outSlope: {x: 0, y: 0, z: 0, w: 0}
         tangentMode: 0
@@ -5048,7 +5048,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
       - serializedVersion: 3
         time: 3.125
-        value: {x: 0.46255964, y: 0.12891488, z: 0.31149235, w: 0.81999516}
+        value: {x: 0.46255967, y: 0.12891491, z: 0.3114923, w: 0.81999516}
         inSlope: {x: 0, y: 0, z: 0, w: 0}
         outSlope: {x: 0, y: 0, z: 0, w: 0}
         tangentMode: 0
@@ -5064,7 +5064,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -0.08249348, y: -0.7864294, z: -0.020350566, w: 0.61180836}
+        value: {x: -0.082493484, y: -0.7864294, z: -0.020350575, w: 0.61180836}
         inSlope: {x: 0, y: 0, z: 0, w: 0}
         outSlope: {x: 0, y: 0, z: 0, w: 0}
         tangentMode: 0
@@ -5073,7 +5073,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
       - serializedVersion: 3
         time: 3.125
-        value: {x: -0.08249348, y: -0.7864294, z: -0.020350566, w: 0.61180836}
+        value: {x: -0.082493484, y: -0.7864294, z: -0.020350575, w: 0.61180836}
         inSlope: {x: 0, y: 0, z: 0, w: 0}
         outSlope: {x: 0, y: 0, z: 0, w: 0}
         tangentMode: 0
@@ -5089,7 +5089,8 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -2.3283067e-10, y: -0.0000007990748, z: 0.000000050058592, w: 1}
+        value: {x: 0.0000000046566138, y: -0.00000078231096, z: 0.00000007008202,
+          w: 1}
         inSlope: {x: 0, y: 0, z: 0, w: 0}
         outSlope: {x: 0, y: 0, z: 0, w: 0}
         tangentMode: 0
@@ -5098,7 +5099,8 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
       - serializedVersion: 3
         time: 3.125
-        value: {x: -2.3283067e-10, y: -0.0000007990748, z: 0.000000050058592, w: 1}
+        value: {x: 0.0000000046566138, y: -0.00000078231096, z: 0.00000007008202,
+          w: 1}
         inSlope: {x: 0, y: 0, z: 0, w: 0}
         outSlope: {x: 0, y: 0, z: 0, w: 0}
         tangentMode: 0
@@ -5114,7 +5116,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -0.023221467, y: -0.76588386, z: -0.037332956, w: 0.64147407}
+        value: {x: -0.023221454, y: -0.76588386, z: -0.037332993, w: 0.64147407}
         inSlope: {x: 0, y: 0, z: 0, w: 0}
         outSlope: {x: 0, y: 0, z: 0, w: 0}
         tangentMode: 0
@@ -5123,7 +5125,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
       - serializedVersion: 3
         time: 3.125
-        value: {x: -0.023221467, y: -0.76588386, z: -0.037332956, w: 0.64147407}
+        value: {x: -0.023221454, y: -0.76588386, z: -0.037332993, w: 0.64147407}
         inSlope: {x: 0, y: 0, z: 0, w: 0}
         outSlope: {x: 0, y: 0, z: 0, w: 0}
         tangentMode: 0
@@ -5139,7 +5141,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0.0000000018626454, y: -0.0000005438924, z: -0.00000001047738,
+        value: {x: 0.0000000037252907, y: -0.00000054016715, z: -0.000000016065316,
           w: 1}
         inSlope: {x: 0, y: 0, z: 0, w: 0}
         outSlope: {x: 0, y: 0, z: 0, w: 0}
@@ -5149,7 +5151,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
       - serializedVersion: 3
         time: 3.125
-        value: {x: 0.0000000018626454, y: -0.0000005438924, z: -0.00000001047738,
+        value: {x: 0.0000000037252907, y: -0.00000054016715, z: -0.000000016065316,
           w: 1}
         inSlope: {x: 0, y: 0, z: 0, w: 0}
         outSlope: {x: 0, y: 0, z: 0, w: 0}
@@ -5268,7 +5270,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0.46255964, y: 0.12891488, z: 0.31149235, w: 0.81999516}
+        value: {x: 0.46255967, y: 0.12891491, z: 0.3114923, w: 0.81999516}
         inSlope: {x: 0, y: 0, z: 0, w: 0}
         outSlope: {x: 0, y: 0, z: 0, w: 0}
         tangentMode: 0
@@ -5277,7 +5279,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
       - serializedVersion: 3
         time: 3.125
-        value: {x: 0.46255964, y: 0.12891488, z: 0.31149235, w: 0.81999516}
+        value: {x: 0.46255967, y: 0.12891491, z: 0.3114923, w: 0.81999516}
         inSlope: {x: 0, y: 0, z: 0, w: 0}
         outSlope: {x: 0, y: 0, z: 0, w: 0}
         tangentMode: 0
@@ -9177,7 +9179,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -0.000090880436, y: 0.0005071494, z: -0.0006072378}
+        value: {x: -0.00009088065, y: 0.0005071489, z: -0.00060723745}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -9186,7 +9188,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 3.125
-        value: {x: -0.000090880436, y: 0.0005071494, z: -0.0006072378}
+        value: {x: -0.00009088065, y: 0.0005071489, z: -0.00060723745}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -9202,7 +9204,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 2.2351741e-10, y: -2.5844202e-10, z: -2.7008354e-10}
+        value: {x: 2.9802322e-10, y: -1.44355e-10, z: -5.5879353e-11}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -9211,7 +9213,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 3.125
-        value: {x: 2.2351741e-10, y: -2.5844202e-10, z: -2.7008354e-10}
+        value: {x: 2.9802322e-10, y: -1.44355e-10, z: -5.5879353e-11}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -9227,7 +9229,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0.00014981226, y: 0.0015222767, z: 0.000060012135}
+        value: {x: 0.00014981211, y: 0.0015222762, z: 0.000060012517}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -9236,7 +9238,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 3.125
-        value: {x: 0.00014981226, y: 0.0015222767, z: 0.000060012135}
+        value: {x: 0.00014981211, y: 0.0015222762, z: 0.000060012517}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -9252,7 +9254,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 3.7252902e-11, y: 5.5879353e-11, z: 2.3283064e-10}
+        value: {x: 1.8626451e-11, y: -1.6763806e-10, z: -3.7252902e-11}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -9261,7 +9263,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 3.125
-        value: {x: 3.7252902e-11, y: 5.5879353e-11, z: 2.3283064e-10}
+        value: {x: 1.8626451e-11, y: -1.6763806e-10, z: -3.7252902e-11}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -11606,156 +11608,6 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     path: Dronte_Rig/MCH-torso.parent/torso/MCH-spine.004/spine_fk.004/MCH-pivot/tweak_spine.004/ORG-spine.004/DEF-thigh.R/DEF-thigh.R.001/DEF-shin.R/DEF-shin.R.001/DEF-foot.R/DEF-foot.R.001/DEF-toe.R
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: 0.9999968, y: 1.0000002, z: 1.0000026}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
-        time: 3.125
-        value: {x: 0.9999968, y: 1.0000002, z: 1.0000026}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: Dronte_Rig/MCH-torso.parent/torso/MCH-spine.004/spine_fk.004/MCH-spine.005/spine_fk.005/tweak_spine.005/ORG-spine.005/ORG-shoulder.R/ORG-Wing.R/ORG-Wing.001.R/ORG-Wing.002.R
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: 0.99999994, y: 0.99999994, z: 1.0000001}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
-        time: 3.125
-        value: {x: 0.99999994, y: 0.99999994, z: 1.0000001}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: Dronte_Rig/MCH-torso.parent/torso/MCH-spine.004/spine_fk.004/MCH-spine.005/spine_fk.005/tweak_spine.005/ORG-spine.005/ORG-shoulder.R/ORG-Wing.R/ORG-Wing.001.R/ORG-Wing.002.R/ORG-w_feather.001.R
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: 1, y: 0.9999999, z: 0.99999994}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
-        time: 3.125
-        value: {x: 1, y: 0.9999999, z: 0.99999994}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: Dronte_Rig/MCH-torso.parent/torso/MCH-spine.004/spine_fk.004/MCH-spine.005/spine_fk.005/tweak_spine.005/ORG-spine.005/ORG-shoulder.R/ORG-Wing.R/ORG-Wing.001.R/ORG-Wing.002.R/ORG-w_feather.001.R/DEF-w_feather.001.R
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: 1, y: 1, z: 1}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
-        time: 3.125
-        value: {x: 1, y: 1, z: 1}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: Dronte_Rig/MCH-torso.parent/torso/MCH-spine.004/spine_fk.004/MCH-spine.005/spine_fk.005/tweak_spine.005/ORG-spine.005/ORG-shoulder.R/ORG-Wing.R/ORG-Wing.001.R/ORG-Wing.002.R/ORG-w_feather.002.R
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: 1, y: 0.99999994, z: 0.99999994}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
-        time: 3.125
-        value: {x: 1, y: 0.99999994, z: 0.99999994}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: Dronte_Rig/MCH-torso.parent/torso/MCH-spine.004/spine_fk.004/MCH-spine.005/spine_fk.005/tweak_spine.005/ORG-spine.005/ORG-shoulder.R/ORG-Wing.R/ORG-Wing.001.R/ORG-Wing.002.R/ORG-w_feather.002.R/DEF-w_feather.002.R
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: 0.9999968, y: 1.0000002, z: 1.0000026}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
-        time: 3.125
-        value: {x: 0.9999968, y: 1.0000002, z: 1.0000026}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: Dronte_Rig/MCH-torso.parent/torso/MCH-spine.004/spine_fk.004/MCH-spine.005/spine_fk.005/tweak_spine.005/ORG-spine.005/ORG-shoulder.R/DEF-Wing.R/DEF-Wing.001.R/DEF-Wing.002.R
   m_FloatCurves: []
   m_PPtrCurves: []
   m_SampleRate: 24
