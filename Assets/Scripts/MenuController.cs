@@ -11,6 +11,12 @@ public class MenuController : MonoBehaviour
     [SerializeField]
     private LocomotionTeleport teleportSystem;
 
+    [SerializeField]
+    private Canvas menuCanvas;
+
+    [SerializeField]
+    private Canvas questList;
+
     public void EnableTeleportSystem()
     {
         if (controller.enabled)
@@ -38,6 +44,7 @@ public class MenuController : MonoBehaviour
 
     public void ExitMenu()
     {
-        transform.position = Vector3.down;
+        menuCanvas.enabled = false;
+        questList.enabled = true;
     }
 }
