@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using System.IO;
+using UnityEngine.Rendering;
 
 public class TakePhoto : MonoBehaviour
 {
@@ -21,10 +22,15 @@ public class TakePhoto : MonoBehaviour
     [SerializeField]
     private OVRGrabbable cameraGrab;
 
+    [SerializeField]
+    private Toggle questText;
+
     private int resWidth = 256;
     private int resHeight = 256;
 
     private Texture2D snapshot;
+    private int screenshotNumber = 0;
+  
 
     private void Awake()
     {
@@ -40,15 +46,26 @@ public class TakePhoto : MonoBehaviour
     {
         if (cameraGrab.isGrabbed && !photoCanvas.enabled)
         {
+            /*
             RenderTexture.active = snapCam.targetTexture;            //render from snapCam, not Main Camera
-            snapshot = new Texture2D(resWidth, resHeight, TextureFormat.RGB24, false);
+            Texture2D snapshot = new Texture2D(resWidth, resHeight, TextureFormat.RGB24, false);
             Rect regionToRead = new Rect(0, 0, resWidth, resHeight);
             snapshot.ReadPixels(regionToRead, 0, 0, false);
             snapshot.Apply();
+            */
+            snapshot = new Texture2D(resWidth, resHeight, TextureFormat.ARGB32, false);
+            Graphics.CopyTexture(snapCam.targetTexture, snapshot);
 
+            /*
+            //png-file wird gespeichert, ist aber komplett weiﬂ
             byte[] byteArray = snapshot.EncodeToPNG();
-            File.WriteAllBytes(Application.dataPath + "camera.png", byteArray);             //funktioniert nicht
-
+            File.WriteAllBytes(Application.persistentDataPath + "/camera" + screenshotNumber + ".png", byteArray);             
+            screenshotNumber += 1;
+            */
+            if (!questText.isOn)
+            {
+                questText.isOn = true;
+            }
             ShowPhoto();
         }
     }
