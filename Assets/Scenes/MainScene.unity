@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.10148008, g: 0.28847134, b: 0.5377779, a: 1}
+  m_IndirectSpecularColor: {r: 0.10117787, g: 0.2880348, b: 0.5371327, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3563,6 +3563,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1828011984}
+  - {fileID: 1919190549}
   m_Father: {fileID: 812037398}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 80, y: 4, z: 0}
@@ -7236,6 +7237,91 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &1919190548
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 947404648}
+    m_Modifications:
+    - target: {fileID: 1152052189803245944, guid: be3a74ee4c9d4d899462b72a41f62728,
+        type: 3}
+      propertyPath: m_Name
+      value: Water Specular Mirror (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529415330526082146, guid: be3a74ee4c9d4d899462b72a41f62728,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529415330526082146, guid: be3a74ee4c9d4d899462b72a41f62728,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.33075
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529415330526082146, guid: be3a74ee4c9d4d899462b72a41f62728,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.860934
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529415330526082146, guid: be3a74ee4c9d4d899462b72a41f62728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -19.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529415330526082146, guid: be3a74ee4c9d4d899462b72a41f62728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 163.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529415330526082146, guid: be3a74ee4c9d4d899462b72a41f62728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 24.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529415330526082146, guid: be3a74ee4c9d4d899462b72a41f62728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.76557785
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529415330526082146, guid: be3a74ee4c9d4d899462b72a41f62728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.64239603
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529415330526082146, guid: be3a74ee4c9d4d899462b72a41f62728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.026734564
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529415330526082146, guid: be3a74ee4c9d4d899462b72a41f62728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.02243296
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529415330526082146, guid: be3a74ee4c9d4d899462b72a41f62728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529415330526082146, guid: be3a74ee4c9d4d899462b72a41f62728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529415330526082146, guid: be3a74ee4c9d4d899462b72a41f62728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: be3a74ee4c9d4d899462b72a41f62728, type: 3}
+--- !u!4 &1919190549 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6529415330526082146, guid: be3a74ee4c9d4d899462b72a41f62728,
+    type: 3}
+  m_PrefabInstance: {fileID: 1919190548}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1923113442
 PrefabInstance:
   m_ObjectHideFlags: 0
