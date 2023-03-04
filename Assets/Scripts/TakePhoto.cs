@@ -23,13 +23,43 @@ public class TakePhoto : MonoBehaviour
     private OVRGrabbable cameraGrab;
 
     [SerializeField]
-    private Toggle questText;
+    private Toggle questTextCamera;
+
+    [SerializeField]
+    private Toggle questTextMammoth;
+
+    [SerializeField]
+    private Toggle questTextCat;
+
+    [SerializeField]
+    private Toggle questTextDodo;
+
+    [SerializeField]
+    private Collider mammothCollider;
+
+    [SerializeField]
+    private Collider catCollider;
+
+    [SerializeField]
+    private Collider dodoCollider;
+
+    [SerializeField]
+    private Transform[] mammothTargetPointList;
+
+    [SerializeField]
+    private Transform[] catTargetPointList;
+
+    [SerializeField]
+    private Transform[] dodoTargetPointList;
+
+    [SerializeField]
+    private LayerMask layer;
 
     private int resWidth = 256;
     private int resHeight = 256;
 
     private Texture2D snapshot;
-    private int screenshotNumber = 0;
+    //private int screenshotNumber = 0;
   
 
     private void Awake()
@@ -62,9 +92,21 @@ public class TakePhoto : MonoBehaviour
             File.WriteAllBytes(Application.persistentDataPath + "/camera" + screenshotNumber + ".png", byteArray);             
             screenshotNumber += 1;
             */
-            if (!questText.isOn)
+            if (!questTextCamera.isOn)
             {
-                questText.isOn = true;
+                questTextCamera.isOn = true;
+            }
+            if(!questTextMammoth.isOn && IsVisible(snapCam, mammothCollider, mammothTargetPointList))
+            {
+                questTextMammoth.isOn = true;
+            }
+            if (!questTextCat.isOn && IsVisible(snapCam, catCollider, catTargetPointList))
+            {
+                questTextCat.isOn = true;
+            }
+            if (!questTextDodo.isOn && IsVisible(snapCam, dodoCollider, dodoTargetPointList))
+            {
+                questTextDodo.isOn = true;
             }
             ShowPhoto();
         }
@@ -75,5 +117,44 @@ public class TakePhoto : MonoBehaviour
         photoCanvas.enabled = true;
         Sprite photoSprite = Sprite.Create(snapshot, new Rect(0.0f, 0.0f, resWidth, resHeight), new Vector2(0.5f, 0.5f), 100.0f);
         photoDisplayArea.sprite = photoSprite;
+    }
+
+    public bool IsVisible(Camera c, Collider target, Transform[] rayTargetPointList)
+    {
+        var planes = GeometryUtility.CalculateFrustumPlanes(c);
+        Vector3 cameraPosition = c.transform.position;
+        Vector3 targetCenterPosition = rayTargetPointList[0].position;
+        //Vector3 targetDirection = targetCenterPosition - cameraPosition;
+        //Vector3 fwd = c.transform.TransformDirection(Vector3.forward);
+        //float distanceToObject = Vector3.Distance(point, cameraPosition);
+        
+        //check if camera is looking in direction of target gameobject
+        foreach (var plane in planes)
+        {
+            if (plane.GetDistanceToPoint(targetCenterPosition) < 0)
+            {
+                return false;
+            }
+        }
+        
+        //check if target points are really visible (not hidden behind other objects/terrain
+        RaycastHit hit;
+
+        foreach (Transform targetPoint in rayTargetPointList)
+        {
+            Vector3 targetDirection = targetPoint.position - cameraPosition;
+            if (Physics.Raycast(cameraPosition, targetDirection, out hit, layer))
+            {
+                if (hit.collider != target)
+                {
+                    return false;
+                }
+                
+            }
+        }
+        return true;
+
+        
+
     }
 }
