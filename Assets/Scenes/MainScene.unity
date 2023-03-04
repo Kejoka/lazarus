@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 132660217}
   - component: {fileID: 132660218}
   m_Layer: 0
-  m_Name: Terrain_(-100.00, 0.00, 100.00)
+  m_Name: Snow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2873,7 +2873,6 @@ Transform:
   - {fileID: 1792858558}
   - {fileID: 812037398}
   - {fileID: 1994420111}
-  - {fileID: 1028541729}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3302,7 +3301,7 @@ GameObject:
   - component: {fileID: 947404647}
   - component: {fileID: 947404649}
   m_Layer: 0
-  m_Name: Terrain_(0.00, 0.00, 0.00)
+  m_Name: Tropical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4703,7 +4702,7 @@ GameObject:
   - component: {fileID: 1370177378}
   - component: {fileID: 1370177380}
   m_Layer: 0
-  m_Name: Terrain_(0.00, 0.00, 100.00)
+  m_Name: Savannah
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5446,6 +5445,7 @@ Transform:
   m_Children:
   - {fileID: 1478006244}
   - {fileID: 918610399}
+  - {fileID: 1028541729}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5897,7 +5897,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 826247224}
+    m_TransformParent: {fileID: 1499647693}
     m_Modifications:
     - target: {fileID: 1035174823521234, guid: e550825b76c9f4a4cafd2af6ba627a45, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5981,19 +5981,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4895209458082094, guid: e550825b76c9f4a4cafd2af6ba627a45, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4895209458082094, guid: e550825b76c9f4a4cafd2af6ba627a45, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.63
+      value: 39.671547
       objectReference: {fileID: 0}
     - target: {fileID: 4895209458082094, guid: e550825b76c9f4a4cafd2af6ba627a45, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.89
+      value: 2.9970002
       objectReference: {fileID: 0}
     - target: {fileID: 4895209458082094, guid: e550825b76c9f4a4cafd2af6ba627a45, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 71.79
+      value: -47.309998
       objectReference: {fileID: 0}
     - target: {fileID: 4895209458082094, guid: e550825b76c9f4a4cafd2af6ba627a45, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6356,6 +6356,61 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1828011983}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1828011985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1152052189803245944, guid: be3a74ee4c9d4d899462b72a41f62728,
+    type: 3}
+  m_PrefabInstance: {fileID: 1828011983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!154 &1828011986
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828011985}
+  m_Material: {fileID: 0}
+  m_Enabled: 1
+  m_TerrainData: {fileID: 15600000, guid: bfee2bef9cc824903ab52934fb7e67c3, type: 2}
+  m_EnableTreeColliders: 1
+--- !u!1839735485 &1828011987
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828011985}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &1833669018 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100008, guid: 986afcd52b9de4640b1f5fddc0497076,
@@ -7084,7 +7139,7 @@ GameObject:
   - component: {fileID: 1960316598}
   - component: {fileID: 1960316600}
   m_Layer: 0
-  m_Name: Terrain_(-100.00, 0.00, 0.00)
+  m_Name: Forest_Mountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7360,7 +7415,7 @@ PrefabInstance:
     - target: {fileID: 1152052189803245944, guid: be3a74ee4c9d4d899462b72a41f62728,
         type: 3}
       propertyPath: m_Name
-      value: Water Specular Mirror (1)
+      value: Water Pond Mid
       objectReference: {fileID: 0}
     - target: {fileID: 1152052189803245944, guid: be3a74ee4c9d4d899462b72a41f62728,
         type: 3}
