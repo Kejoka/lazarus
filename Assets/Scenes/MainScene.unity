@@ -2434,37 +2434,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &593423134
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 593423135}
-  m_Layer: 6
-  m_Name: CenterRayPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &593423135
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593423134}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.32, y: 26.76, z: 1.98}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7467697952041968819}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &681106561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4557,12 +4526,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4471613377008970, guid: ce816f2e6abb0504092c23ed9b970dfd,
     type: 3}
   m_PrefabInstance: {fileID: 214153848}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1004875591 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3210796964885545768, guid: d1ecde222d924824c80ff9310315e770,
-    type: 3}
-  m_PrefabInstance: {fileID: 3210796963947801711}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1051663483
 GameObject:
@@ -7380,8 +7343,6 @@ MonoBehaviour:
   - {fileID: 1486163448}
   - {fileID: 2078706282}
   - {fileID: 1245491963}
-  - {fileID: 1004875591}
-  - {fileID: 1521044689}
   catTargetPointList:
   - {fileID: 681449757}
   - {fileID: 1520282247}
@@ -7599,12 +7560,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7615477770985401712, guid: 874b51321dfc7004aaeb663e373683c5,
     type: 3}
   m_PrefabInstance: {fileID: 7615477772435736567}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1521044689 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3210796963254214846, guid: d1ecde222d924824c80ff9310315e770,
-    type: 3}
-  m_PrefabInstance: {fileID: 3210796963947801711}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1528778610 stripped
 GameObject:
@@ -10000,37 +9955,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3210796963947801711}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2086927265
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2086927266}
-  m_Layer: 8
-  m_Name: CenterRayPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2086927266
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2086927265}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.017, y: 0.543, z: 0.014}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1489629237086380129}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2087091525
 GameObject:
   m_ObjectHideFlags: 0

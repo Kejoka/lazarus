@@ -99,14 +99,17 @@ public class TakePhoto : MonoBehaviour
             if(!questTextMammoth.isOn && IsVisible(snapCam, mammothCollider, mammothTargetPointList))
             {
                 questTextMammoth.isOn = true;
+                //TODO: Mammut-Text Soundwiedergabe implementieren
             }
-            if (!questTextCat.isOn && IsVisible(snapCam, catCollider, catTargetPointList))
+            else if (!questTextCat.isOn && IsVisible(snapCam, catCollider, catTargetPointList))
             {
                 questTextCat.isOn = true;
+                //TODO: Saebelzahntiger-Text Soundwiedergabe implementieren
             }
-            if (!questTextDodo.isOn && IsVisible(snapCam, dodoCollider, dodoTargetPointList))
+            else if (!questTextDodo.isOn && IsVisible(snapCam, dodoCollider, dodoTargetPointList))
             {
                 questTextDodo.isOn = true;
+                //TODO: Doo-Text Soundwiedergabe implementieren
             }
             ShowPhoto();
         }
@@ -121,14 +124,37 @@ public class TakePhoto : MonoBehaviour
 
     public bool IsVisible(Camera c, Collider target, Transform[] rayTargetPointList)
     {
-        var planes = GeometryUtility.CalculateFrustumPlanes(c);
         Vector3 cameraPosition = c.transform.position;
         Vector3 targetCenterPosition = rayTargetPointList[0].transform.position;
-        //Vector3 targetDirection = targetCenterPosition - cameraPosition;
-        //Vector3 fwd = c.transform.TransformDirection(Vector3.forward);
-        //float distanceToObject = Vector3.Distance(point, cameraPosition);
-        
+        float distanceToObject = Vector3.Distance(targetCenterPosition, cameraPosition);
+
+        // min / max photo distance for dodo
+        if (target == dodoCollider)
+        {
+            if(distanceToObject > 20.0f || distanceToObject < 1.0f)
+            {
+                return false;
+            }
+        }
+        // min / max photo distance for cat
+        else if (target == catCollider)
+        {
+            if (distanceToObject > 40.0f || distanceToObject < 1.0f)
+            {
+                return false;
+            }
+        }
+        //min / max photo distance for mammoth
+        else
+        {
+            if(distanceToObject > 60.0f || distanceToObject < 8.0f)
+            {
+                return false;
+            }
+        }
+
         //check if camera is looking in direction of target gameobject
+        var planes = GeometryUtility.CalculateFrustumPlanes(c);
         foreach (var plane in planes)
         {
             if (plane.GetDistanceToPoint(targetCenterPosition) < 0)
@@ -137,7 +163,7 @@ public class TakePhoto : MonoBehaviour
             }
         }
         
-        //check if target points are really visible (not hidden behind other objects/terrain
+        //check if target points are really visible (not hidden behind other objects/terrain)
         
         RaycastHit hit;
 
@@ -153,9 +179,7 @@ public class TakePhoto : MonoBehaviour
                 
             }
         }
-        return true;
-
-        
+        return true;   
 
     }
 }
