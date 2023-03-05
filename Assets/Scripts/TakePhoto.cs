@@ -123,7 +123,7 @@ public class TakePhoto : MonoBehaviour
     {
         var planes = GeometryUtility.CalculateFrustumPlanes(c);
         Vector3 cameraPosition = c.transform.position;
-        Vector3 targetCenterPosition = rayTargetPointList[0].position;
+        Vector3 targetCenterPosition = rayTargetPointList[0].transform.position;
         //Vector3 targetDirection = targetCenterPosition - cameraPosition;
         //Vector3 fwd = c.transform.TransformDirection(Vector3.forward);
         //float distanceToObject = Vector3.Distance(point, cameraPosition);
@@ -138,6 +138,7 @@ public class TakePhoto : MonoBehaviour
         }
         
         //check if target points are really visible (not hidden behind other objects/terrain
+        
         RaycastHit hit;
 
         foreach (Transform targetPoint in rayTargetPointList)
