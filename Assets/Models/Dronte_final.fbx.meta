@@ -1,8 +1,23 @@
 fileFormatVersion: 2
-guid: 08b3c7ba2f8534cb782cdfe3cc23f866
+guid: 349a8e2c1484f2e43adc410d08fafece
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -8624146789885609895
+    second: Dronte_Shake
+  - first:
+      74: -6390666819022050246
+    second: Dronte_Head_1
+  - first:
+      74: -1091073336200022667
+    second: Walk_To_Stand
+  - first:
+      74: 2667949614841947897
+    second: Walk
+  - first:
+      74: -7217493827790047899
+    second: Stand_To_Walk
   externalObjects: {}
   materials:
     materialImportMode: 2

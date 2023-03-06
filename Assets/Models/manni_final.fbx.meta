@@ -1,8 +1,23 @@
 fileFormatVersion: 2
-guid: 962947eb3a05b48a1bc0503e0e0109fe
+guid: c90d4899e194f9d488958316ac45c6ed
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -6253263260898082028
+    second: walk_cycle
+  - first:
+      74: 3172135971258091552
+    second: idle_1
+  - first:
+      74: -2801555861239396022
+    second: walk_to_stand
+  - first:
+      74: 2238388644784420955
+    second: stand_to_walk
+  - first:
+      74: 239315062609474311
+    second: trunk
   externalObjects: {}
   materials:
     materialImportMode: 2

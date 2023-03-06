@@ -19,16 +19,6 @@ public class GrabInteraction : MonoBehaviour
         if (collider == camObject)
         {
             questText.isOn = true;
-            questList.enabled = false;
-        }
-
-    }
-
-    public void OnTriggerExit(Collider collider)
-    {
-        if (collider == camObject)
-        {
-            questList.enabled = true;
         }
 
     }
