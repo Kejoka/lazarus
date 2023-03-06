@@ -9,6 +9,7 @@ using UnityEngine.Rendering;
 public class TakePhoto : MonoBehaviour
 {
     public InputActionReference triggerPressedReference = null;
+    public AudioSource cameraClick;
 
     [SerializeField]
     private Camera snapCam;
@@ -86,8 +87,8 @@ public class TakePhoto : MonoBehaviour
             snapshot.ReadPixels(regionToRead, 0, 0, false);
             snapshot.Apply();
             */
-
-            //TODO: Kamera-Flash Sound implementieren
+            cameraClick = GetComponent<AudioSource>();
+            cameraClick.Play();
 
             snapshot = new Texture2D(resWidth, resHeight, TextureFormat.ARGB32, false);
             Graphics.CopyTexture(snapCam.targetTexture, snapshot);
@@ -105,17 +106,15 @@ public class TakePhoto : MonoBehaviour
             if(!questTextMammoth.isOn && IsVisible(snapCam, mammothCollider, mammothTargetPointList))
             {
                 questTextMammoth.isOn = true;
-                //TODO: Mammut-Text Soundwiedergabe implementieren
             }
             else if (!questTextCat.isOn && IsVisible(snapCam, catCollider, catTargetPointList))
             {
                 questTextCat.isOn = true;
-                //TODO: Saebelzahntiger-Text Soundwiedergabe implementieren
             }
             else if (!questTextDodo.isOn && IsVisible(snapCam, dodoCollider, dodoTargetPointList))
             {
                 questTextDodo.isOn = true;
-                //TODO: Doo-Text Soundwiedergabe implementieren
+
             }
             ShowPhoto();
         }
