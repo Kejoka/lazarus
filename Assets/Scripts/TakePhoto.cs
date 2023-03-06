@@ -20,6 +20,9 @@ public class TakePhoto : MonoBehaviour
     private Canvas photoCanvas;
 
     [SerializeField]
+    private Canvas questCanvas;
+
+    [SerializeField]
     private OVRGrabbable cameraGrab;
 
     [SerializeField]
@@ -83,6 +86,9 @@ public class TakePhoto : MonoBehaviour
             snapshot.ReadPixels(regionToRead, 0, 0, false);
             snapshot.Apply();
             */
+
+            //TODO: Kamera-Flash Sound implementieren
+
             snapshot = new Texture2D(resWidth, resHeight, TextureFormat.ARGB32, false);
             Graphics.CopyTexture(snapCam.targetTexture, snapshot);
 
@@ -118,6 +124,10 @@ public class TakePhoto : MonoBehaviour
     public void ShowPhoto()
     {
         photoCanvas.enabled = true;
+        if (questCanvas.enabled)
+        {
+            questCanvas.enabled = false;
+        }
         Sprite photoSprite = Sprite.Create(snapshot, new Rect(0.0f, 0.0f, resWidth, resHeight), new Vector2(0.5f, 0.5f), 100.0f);
         photoDisplayArea.sprite = photoSprite;
     }

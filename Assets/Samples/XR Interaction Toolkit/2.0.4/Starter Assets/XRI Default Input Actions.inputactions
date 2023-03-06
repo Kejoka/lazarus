@@ -1101,6 +1101,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Menu",
+            "id": "45a6d6cb-caf3-4e52-9ee8-fe4c394b3043",
+            "actions": [
+                {
+                    "name": "MenuPress",
+                    "type": "Button",
+                    "id": "940114e7-7ca5-4269-82ce-242ee7acd022",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "277c144e-eb03-46b0-a720-4cb0893ce271",
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MenuPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
