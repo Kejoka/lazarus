@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: leaf
-  m_Shader: {fileID: 10511, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 17e009e15a323e541862cfaf4f5788b5, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _BENDINGCONTROLS_VERTEX_COLORS_AND_UV4
@@ -49,10 +49,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _GlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 69c952e0cacbc0c428fbb6b81f6c4035, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -69,10 +65,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _ShadowOffset:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _ShadowTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -83,9 +75,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AO: 2.4
     - _AfsXtraBending: 0
-    - _BaseLight: 0.35
     - _BendingControls: 1
     - _BumpScale: 1
     - _Cutoff: 0.5
@@ -96,12 +86,10 @@ Material:
     - _LeafTurbulence: 0.5
     - _Metallic: 0
     - _Mode: 0
-    - _Occlusion: 7.5
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _ShadowOffsetScale: 1
     - _ShadowStrength: 0.9
-    - _Shininess: 0.078125
     - _SquashAmount: 1
     - _SrcBlend: 1
     - _TranslucencyViewDependency: 0.7
