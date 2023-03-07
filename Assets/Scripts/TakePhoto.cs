@@ -104,6 +104,12 @@ public class TakePhoto : MonoBehaviour
             snapshot = new Texture2D(resWidth, resHeight, TextureFormat.ARGB32, false);
             Graphics.CopyTexture(snapCam.targetTexture, snapshot);
 
+            if (mammutInfo.isPlaying || smilodonInfo.isPlaying || dodoInfo.isPlaying)
+            {
+                mammutInfo.Stop();
+                smilodonInfo.Stop();
+                dodoInfo.Stop();
+            }
             /*
             //png-file wird gespeichert, ist aber komplett weiﬂ
             byte[] byteArray = snapshot.EncodeToPNG();
