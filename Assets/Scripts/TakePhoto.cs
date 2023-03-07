@@ -98,7 +98,7 @@ public class TakePhoto : MonoBehaviour
             snapshot.ReadPixels(regionToRead, 0, 0, false);
             snapshot.Apply();
             */
-            cameraClick = GetComponent<AudioSource>();
+         
             cameraClick.Play();
 
             snapshot = new Texture2D(resWidth, resHeight, TextureFormat.ARGB32, false);
@@ -117,19 +117,16 @@ public class TakePhoto : MonoBehaviour
             if(!questTextMammoth.isOn && IsVisible(snapCam, mammothCollider, mammothTargetPointList))
             {
                 questTextMammoth.isOn = true;
-                mammutInfo = GetComponent<AudioSource>();
                 mammutInfo.Play();
             }
             else if (!questTextCat.isOn && IsVisible(snapCam, catCollider, catTargetPointList))
             {
                 questTextCat.isOn = true;
-                smilodonInfo = GetComponent<AudioSource>();
                 smilodonInfo.Play();
             }
             else if (!questTextDodo.isOn && IsVisible(snapCam, dodoCollider, dodoTargetPointList))
             {
                 questTextDodo.isOn = true;
-                dodoInfo = GetComponent<AudioSource>();
                 dodoInfo.Play();
             }
             ShowPhoto();
