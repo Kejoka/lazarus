@@ -5,22 +5,12 @@ using UnityEngine.UI;
 
 public class GrabInteraction : MonoBehaviour
 {
-    [SerializeField]
-    private Collider camObject;
 
     [SerializeField]
     private Toggle questText;
 
-    [SerializeField]
-    private Canvas questList;
-
-    public void OnTriggerEnter(Collider collider)
-    {
-        if (collider == camObject)
-        {
-            questText.isOn = true;
-        }
-
+    public void toggleQuestText() {
+        questText.isOn = true;
     }
 
 
