@@ -8,8 +8,6 @@ using UnityEngine.Rendering;
 
 public class TakePhoto : MonoBehaviour
 {
-    public InputActionReference triggerPressedReference = null;
-
     [SerializeField]
     private Camera snapCam;
 
@@ -21,9 +19,6 @@ public class TakePhoto : MonoBehaviour
 
     [SerializeField]
     private Canvas questCanvas;
-
-    [SerializeField]
-    private OVRGrabbable cameraGrab;
 
     [SerializeField]
     private Toggle questTextCamera;
@@ -63,21 +58,10 @@ public class TakePhoto : MonoBehaviour
 
     private Texture2D snapshot;
     //private int screenshotNumber = 0;
-  
 
-    private void Awake()
+    public void TakeSnapshot()
     {
-        triggerPressedReference.action.performed += TakeSnapshot;
-    }
-
-    private void OnDestroy()
-    {
-        triggerPressedReference.action.performed -= TakeSnapshot;
-    }
-
-    private void TakeSnapshot(InputAction.CallbackContext context)
-    {
-        if (cameraGrab.isGrabbed && !photoCanvas.enabled)
+        if (!photoCanvas.enabled)
         {
             /*
             RenderTexture.active = snapCam.targetTexture;            //render from snapCam, not Main Camera
@@ -93,7 +77,7 @@ public class TakePhoto : MonoBehaviour
             Graphics.CopyTexture(snapCam.targetTexture, snapshot);
 
             /*
-            //png-file wird gespeichert, ist aber komplett weiß
+            //png-file wird gespeichert, ist aber komplett weiï¿½
             byte[] byteArray = snapshot.EncodeToPNG();
             File.WriteAllBytes(Application.persistentDataPath + "/camera" + screenshotNumber + ".png", byteArray);             
             screenshotNumber += 1;

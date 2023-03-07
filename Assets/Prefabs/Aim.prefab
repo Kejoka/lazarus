@@ -109,7 +109,6 @@ GameObject:
   - component: {fileID: 228224254622548068}
   - component: {fileID: 3693494500182379150}
   - component: {fileID: 1892549203683485877}
-  - component: {fileID: -7862041115474250697}
   m_Layer: 0
   m_Name: Aim
   m_TagString: Untagged
@@ -183,20 +182,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-7862041115474250697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9140788645583969917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03a7614f10832d041bccff167d2a460f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PositionIndicator: {fileID: 4000011801263008, guid: 1b474618c4fc5f54e8a8b803c8352c7d,
-    type: 3}
-  OrientationIndicator: {fileID: 4000013012824352, guid: 1b474618c4fc5f54e8a8b803c8352c7d,
-    type: 3}
-  LandingRotation: {x: 0, y: 0, z: 0, w: 0}

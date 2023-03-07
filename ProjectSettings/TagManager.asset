@@ -6,6 +6,9 @@ TagManager:
   tags:
   - RoomLight
   - Pocketable
+  - LeftHand
+  - Pointer
+  - RightHand
   layers:
   - Default
   - TransparentFX
@@ -17,9 +20,9 @@ TagManager:
   - Cat
   - Dodo
   - Objects
-  - 
-  - 
-  - 
+  - Grabable
+  - Body
+  - Teleport
   - 
   - 
   - 

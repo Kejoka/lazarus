@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class SettingsController : MonoBehaviour
 {
     [SerializeField]
-    private CharacterController controller;
+    private MonoBehaviour continuuousMoveProvider;
 
     [SerializeField]
-    private LocomotionTeleport teleportSystem;
+    private GameObject teleportationProvider;
 
     [SerializeField]
     private Canvas menuCanvas;
@@ -25,27 +25,32 @@ public class SettingsController : MonoBehaviour
 
     public void EnableTeleportSystem()
     {
-        if (controller.enabled)
+        if (continuuousMoveProvider.enabled)
         {
-            controller.enabled = false;
+            continuuousMoveProvider.enabled = false;
         }
-        if (!teleportSystem.enabled)
+        if (!teleportationProvider.activeSelf)
         {
-            teleportSystem.enabled = true;
+            teleportationProvider.SetActive(true);
         }
 
     }
 
     public void EnableContinuousMovement()
     {
-        if (!controller.enabled)
+        if (!continuuousMoveProvider.enabled)
         {
-            controller.enabled = true;
+            continuuousMoveProvider.enabled = true;
         }
-        if (teleportSystem.enabled)
+        if (teleportationProvider.activeSelf)
         {
-            teleportSystem.enabled = false;
+            teleportationProvider.SetActive(false);
         }
+    }
+
+    public void EnableDualMovement() {
+        continuuousMoveProvider.enabled = true;
+        teleportationProvider.SetActive(true);
     }
 
     public void BackToMain()
