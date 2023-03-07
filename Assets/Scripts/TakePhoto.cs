@@ -9,7 +9,18 @@ using UnityEngine.Rendering;
 public class TakePhoto : MonoBehaviour
 {
     public InputActionReference triggerPressedReference = null;
-    public AudioSource cameraClick;
+    
+    [SerializeField]
+    private AudioSource cameraClick;
+
+    [SerializeField]
+    private AudioSource mammutInfo;
+
+    [SerializeField]
+    private AudioSource dodoInfo;
+
+    [SerializeField]
+    private AudioSource smilodonInfo;
 
     [SerializeField]
     private Camera snapCam;
@@ -106,15 +117,20 @@ public class TakePhoto : MonoBehaviour
             if(!questTextMammoth.isOn && IsVisible(snapCam, mammothCollider, mammothTargetPointList))
             {
                 questTextMammoth.isOn = true;
+                mammutInfo = GetComponent<AudioSource>();
+                mammutInfo.Play();
             }
             else if (!questTextCat.isOn && IsVisible(snapCam, catCollider, catTargetPointList))
             {
                 questTextCat.isOn = true;
+                smilodonInfo = GetComponent<AudioSource>();
+                smilodonInfo.Play();
             }
             else if (!questTextDodo.isOn && IsVisible(snapCam, dodoCollider, dodoTargetPointList))
             {
                 questTextDodo.isOn = true;
-
+                dodoInfo = GetComponent<AudioSource>();
+                dodoInfo.Play();
             }
             ShowPhoto();
         }
