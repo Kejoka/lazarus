@@ -732,12 +732,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3210796963947801711}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1424357421 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1975513522626094990, guid: ddcc7f9c8271a4f2397cde19120feaf9,
+--- !u!114 &1424357425 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1975513522626094988, guid: ddcc7f9c8271a4f2397cde19120feaf9,
     type: 3}
   m_PrefabInstance: {fileID: 1975513523915988899}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1478006243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -832,11 +838,27 @@ PrefabInstance:
     - target: {fileID: 1478006261, guid: 9b5bebd6413074ddb84a1899bb834cea, type: 3}
       propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1424357421}
+      objectReference: {fileID: 1424357425}
     - target: {fileID: 1478006261, guid: 9b5bebd6413074ddb84a1899bb834cea, type: 3}
       propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1424357421}
+      objectReference: {fileID: 1424357425}
+    - target: {fileID: 1478006261, guid: 9b5bebd6413074ddb84a1899bb834cea, type: 3}
+      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478006261, guid: 9b5bebd6413074ddb84a1899bb834cea, type: 3}
+      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478006261, guid: 9b5bebd6413074ddb84a1899bb834cea, type: 3}
+      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Behaviour, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478006261, guid: 9b5bebd6413074ddb84a1899bb834cea, type: 3}
+      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.Behaviour, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1478006262, guid: 9b5bebd6413074ddb84a1899bb834cea, type: 3}
       propertyPath: questText
       value: 
@@ -896,10 +918,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4267071980654882366, guid: 9b5bebd6413074ddb84a1899bb834cea,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 6691629102714795273, guid: 9b5bebd6413074ddb84a1899bb834cea,
         type: 3}
       propertyPath: m_Name
       value: Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702911550821614762, guid: 9b5bebd6413074ddb84a1899bb834cea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b5bebd6413074ddb84a1899bb834cea, type: 3}
