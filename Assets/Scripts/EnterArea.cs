@@ -11,6 +11,9 @@ public class EnterArea : MonoBehaviour
         if (otherCollider.tag == "Player" && !audioSource.isPlaying)
         {
             audioSource.Play();
+        } else
+        {
+            audioSource.Stop();
         }
     }
 }
