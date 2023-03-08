@@ -40,7 +40,7 @@ public class MammothAI : MonoBehaviour
     void Update()
     {
         
-        if (navAgent.remainingDistance <= navAgent.stoppingDistance) //done with path
+        if (navAgent.remainingDistance <= 1.4) //done with path //navAgent.stoppingDistance
         {
             if (!stoppedWalking)
             {
