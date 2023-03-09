@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 5994826514964782965}
   m_Layer: 10
   m_Name: CameraFeed
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,7 +147,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 8151
+    m_Bits: 14295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: fc9f005b66a9d494aba3eb02ef748f71, type: 2}
   m_TargetDisplay: 0
@@ -901,7 +901,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 94a770a52b4c1a34aa718b64a79db247, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -997,7 +997,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5ff2148dd58044858bb2fb6720a059a7, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
