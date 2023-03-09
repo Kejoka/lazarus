@@ -28,7 +28,7 @@ public class TakePhoto : MonoBehaviour
     private Camera snapCam;
 
     [SerializeField]
-    private Image photoDisplayArea;
+    private RawImage photoDisplayArea;
 
     [SerializeField]
     private Canvas photoCanvas;
@@ -74,10 +74,10 @@ public class TakePhoto : MonoBehaviour
 
     private int resWidth = 256;
     private int resHeight = 256;
-
     private Texture2D snapshot;
-    //private int screenshotNumber = 0;
+    private int screenshotNumber = 0;
 
+    // DEBUG
     //  IEnumerator ExecuteAfterTime()
     // {
     //     yield return new WaitForSeconds(2);
@@ -92,17 +92,16 @@ public class TakePhoto : MonoBehaviour
     {
         if (!photoCanvas.enabled && (tutCanvas == null || !tutCanvas.activeSelf))
         {
-            /*
-            RenderTexture.active = snapCam.targetTexture;            //render from snapCam, not Main Camera
-            Texture2D snapshot = new Texture2D(resWidth, resHeight, TextureFormat.RGB24, false);
-            Rect regionToRead = new Rect(0, 0, resWidth, resHeight);
-            snapshot.ReadPixels(regionToRead, 0, 0, false);
-            snapshot.Apply();
-            */
+            // RenderTexture.active = snapCam.targetTexture;            //render from snapCam, not Main Camera
+            // Texture2D snapshot = new Texture2D(resWidth, resHeight, TextureFormat.RGB24, false);
+            // Rect regionToRead = new Rect(0, 0, resWidth, resHeight);
+            // snapshot.ReadPixels(regionToRead, 0, 0, false);
+            // snapshot.Apply();
 
             cameraClick.Play();
-            snapshot = new Texture2D(resWidth, resHeight, TextureFormat.ARGB32, false);
-            Graphics.CopyTexture(snapCam.targetTexture, snapshot);
+            snapCam.enabled = false;
+            // snapshot = new Texture2D(resWidth, resHeight, TextureFormat.ARGB32, false);
+            // Graphics.CopyTexture(snapCam.targetTexture, snapshot);
 
             /*
             //png-file wird gespeichert, ist aber komplett wei�
@@ -116,18 +115,27 @@ public class TakePhoto : MonoBehaviour
             }
             if(!questTextMammoth.isOn && IsVisible(snapCam, mammothCollider, mammothTargetPointList))
             {
+                mammutInfo.Stop();
+                smilodonInfo.Stop();
+                dodoInfo.Stop();
                 questComplete.Play();
                 questTextMammoth.isOn = true;
                 mammutInfo.Play();
             }
             else if (!questTextCat.isOn && IsVisible(snapCam, catCollider, catTargetPointList))
             {
+                mammutInfo.Stop();
+                smilodonInfo.Stop();
+                dodoInfo.Stop();
                 questComplete.Play();
                 questTextCat.isOn = true;
                 smilodonInfo.Play();
             }
             else if (!questTextDodo.isOn && IsVisible(snapCam, dodoCollider, dodoTargetPointList))
             {
+                mammutInfo.Stop();
+                smilodonInfo.Stop();
+                dodoInfo.Stop();
                 questComplete.Play();
                 questTextDodo.isOn = true;
                 dodoInfo.Play();
@@ -143,8 +151,8 @@ public class TakePhoto : MonoBehaviour
         {
             questCanvas.enabled = false;
         }
-        Sprite photoSprite = Sprite.Create(snapshot, new Rect(0.0f, 0.0f, resWidth, resHeight), new Vector2(0.5f, 0.5f));
-        photoDisplayArea.sprite = photoSprite;
+        // Sprite photoSprite = Sprite.Create(snapshot, new Rect(0.0f, 0.0f, resWidth, resHeight), new Vector2(0.5f, 0.5f));
+        // photoDisplayArea.texture = snapshot;
     }
 
     public bool IsVisible(Camera c, Collider target, Transform[] rayTargetPointList)

@@ -117,13 +117,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AO: 0.6
-    - _BaseLight: 0.41
+    - _AO: 0.3571428
+    - _BaseLight: 0.5357143
     - _BillboardKwToggle: 0
     - _BillboardShadowFade: 0.5
     - _BumpScale: 1
     - _Cull: 2
-    - _Cutoff: 0.125
+    - _Cutoff: 0.5517857
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
@@ -133,7 +133,7 @@ Material:
     - _Metallic: 0
     - _Mode: 1
     - _NormalMapKwToggle: 0
-    - _Occlusion: 0.71428573
+    - _Occlusion: 0.7142857
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _ShadowOffsetScale: 1

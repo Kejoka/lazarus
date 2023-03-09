@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 358418630}
   - component: {fileID: 358418633}
   - component: {fileID: 358418632}
-  - component: {fileID: 358418631}
+  - component: {fileID: 1243213553}
   m_Layer: 0
   m_Name: BeachBoxNoRotation
   m_TagString: Untagged
@@ -59,7 +59,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1cc6db5367d2229418a659d82a3aebd7, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -143,7 +143,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &358418631
+--- !u!114 &1243213553
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,10 +152,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 358418629}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f1aa1c208a473b4984e43330726f6df, type: 3}
+  m_Script: {fileID: 11500000, guid: e5909c9af7b5745da831e7f36e44383f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 358418632}
+  maxVolume: 0.3
 --- !u!1 &2198828603341802496
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,7 +659,7 @@ GameObject:
   - component: {fileID: 1834296008}
   - component: {fileID: 614558694}
   - component: {fileID: 614558696}
-  - component: {fileID: 614558695}
+  - component: {fileID: 1562236727}
   m_Layer: 12
   m_Name: Snow
   m_TagString: Untagged
@@ -921,7 +922,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6416d3b87a8e5a74ba3fa50cb68e5139, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1005,7 +1006,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &614558695
+--- !u!114 &1562236727
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1014,10 +1015,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2198828603705868098}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f1aa1c208a473b4984e43330726f6df, type: 3}
+  m_Script: {fileID: 11500000, guid: e5909c9af7b5745da831e7f36e44383f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 614558696}
+  maxVolume: 0.1
 --- !u!1 &2198828603783171926
 GameObject:
   m_ObjectHideFlags: 0
@@ -2725,7 +2727,7 @@ GameObject:
   - component: {fileID: 79163210}
   - component: {fileID: 1592447629}
   - component: {fileID: 1592447630}
-  - component: {fileID: 1592447631}
+  - component: {fileID: 2025395630}
   m_Layer: 12
   m_Name: Savannah
   m_TagString: Untagged
@@ -2902,7 +2904,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 37aadaca46eb3d94c914c9eb3f2c1b04, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.9
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2986,7 +2988,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1592447631
+--- !u!114 &2025395630
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2995,10 +2997,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2198828604473228247}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f1aa1c208a473b4984e43330726f6df, type: 3}
+  m_Script: {fileID: 11500000, guid: e5909c9af7b5745da831e7f36e44383f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1592447630}
+  maxVolume: 0.9
 --- !u!1 &2198828604491594649
 GameObject:
   m_ObjectHideFlags: 0
@@ -4263,7 +4266,7 @@ GameObject:
   - component: {fileID: 1000205876}
   - component: {fileID: 1508876204}
   - component: {fileID: 1508876205}
-  - component: {fileID: 1508876206}
+  - component: {fileID: 301488560}
   m_Layer: 12
   m_Name: Forest_Mountain
   m_TagString: Untagged
@@ -4440,7 +4443,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: db4c5049ae832b9499dd5d26037814aa, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4524,7 +4527,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1508876206
+--- !u!114 &301488560
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4533,10 +4536,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2198828605065857539}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f1aa1c208a473b4984e43330726f6df, type: 3}
+  m_Script: {fileID: 11500000, guid: e5909c9af7b5745da831e7f36e44383f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1508876205}
+  maxVolume: 0.4
 --- !u!1 &2198828605067204923
 GameObject:
   m_ObjectHideFlags: 0
