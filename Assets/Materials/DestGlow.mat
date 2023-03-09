@@ -14,7 +14,7 @@ Material:
   - _ALPHAPREMULTIPLY_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
@@ -63,12 +63,12 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
-    - _FadeEnd: -0.004
-    - _FadeStart: 1
+    - _FadeEnd: -0.29
+    - _FadeStart: 0.705
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Intensity: 0.226
+    - _Intensity: 0.631
     - _Metallic: 0
     - _Mode: 3
     - _OcclusionStrength: 1
@@ -76,11 +76,11 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Thickness: 0
+    - _Thickness: 0.533
     - _UVSec: 0
     - _ZWrite: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _TintColor: {r: 0.14901961, g: 0.61960787, b: 1, a: 0.5}
+    - _TintColor: {r: 0, g: 0.7002697, b: 1, a: 0.5}
   m_BuildTextureStacks: []
