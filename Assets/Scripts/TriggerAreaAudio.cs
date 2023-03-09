@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnterArea : MonoBehaviour
+public class TriggerAreaAudio : MonoBehaviour
 {
     public AudioSource audioSource;
 
@@ -10,14 +10,14 @@ public class EnterArea : MonoBehaviour
     {
         if (otherCollider.tag == "Player" && !audioSource.isPlaying)
         {
-            audioSource.Play();
+            StartCoroutine(FadeAudioSource.StartFade(audioSource, 3, 1));
         }
     }
 
     void OnTriggerExit(Collider otherCollider) {
         if (otherCollider.tag == "Player" && audioSource.isPlaying)
         {
-            audioSource.Stop();
+            StartCoroutine(FadeAudioSource.StartFade(audioSource, 3, 0));
         }
     }
 }
