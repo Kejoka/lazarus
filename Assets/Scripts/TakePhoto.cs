@@ -8,6 +8,22 @@ using UnityEngine.Rendering;
 
 public class TakePhoto : MonoBehaviour
 {
+
+    [SerializeField]
+    private AudioSource cameraClick;
+
+    [SerializeField]
+    private AudioSource questComplete;
+
+    [SerializeField]
+    private AudioSource mammutInfo;
+
+    [SerializeField]
+    private AudioSource dodoInfo;
+
+    [SerializeField]
+    private AudioSource smilodonInfo;
+
     [SerializeField]
     private Camera snapCam;
 
@@ -53,15 +69,28 @@ public class TakePhoto : MonoBehaviour
     [SerializeField]
     private LayerMask layer;
 
+    [SerializeField]
+    private GameObject tutCanvas;
+
     private int resWidth = 256;
     private int resHeight = 256;
 
     private Texture2D snapshot;
     //private int screenshotNumber = 0;
 
+    //  IEnumerator ExecuteAfterTime()
+    // {
+    //     yield return new WaitForSeconds(2);
+    //     TakeSnapshot();
+    // }
+
+    // void Start() {
+    //     StartCoroutine(ExecuteAfterTime());
+    // }
+
     public void TakeSnapshot()
     {
-        if (!photoCanvas.enabled)
+        if (!photoCanvas.enabled && (tutCanvas == null || !tutCanvas.activeSelf))
         {
             /*
             RenderTexture.active = snapCam.targetTexture;            //render from snapCam, not Main Camera
@@ -71,8 +100,7 @@ public class TakePhoto : MonoBehaviour
             snapshot.Apply();
             */
 
-            //TODO: Kamera-Flash Sound implementieren
-
+            cameraClick.Play();
             snapshot = new Texture2D(resWidth, resHeight, TextureFormat.ARGB32, false);
             Graphics.CopyTexture(snapCam.targetTexture, snapshot);
 
@@ -88,18 +116,21 @@ public class TakePhoto : MonoBehaviour
             }
             if(!questTextMammoth.isOn && IsVisible(snapCam, mammothCollider, mammothTargetPointList))
             {
+                questComplete.Play();
                 questTextMammoth.isOn = true;
-                //TODO: Mammut-Text Soundwiedergabe implementieren
+                mammutInfo.Play();
             }
             else if (!questTextCat.isOn && IsVisible(snapCam, catCollider, catTargetPointList))
             {
+                questComplete.Play();
                 questTextCat.isOn = true;
-                //TODO: Saebelzahntiger-Text Soundwiedergabe implementieren
+                smilodonInfo.Play();
             }
             else if (!questTextDodo.isOn && IsVisible(snapCam, dodoCollider, dodoTargetPointList))
             {
+                questComplete.Play();
                 questTextDodo.isOn = true;
-                //TODO: Doo-Text Soundwiedergabe implementieren
+                dodoInfo.Play();
             }
             ShowPhoto();
         }
@@ -112,7 +143,7 @@ public class TakePhoto : MonoBehaviour
         {
             questCanvas.enabled = false;
         }
-        Sprite photoSprite = Sprite.Create(snapshot, new Rect(0.0f, 0.0f, resWidth, resHeight), new Vector2(0.5f, 0.5f), 100.0f);
+        Sprite photoSprite = Sprite.Create(snapshot, new Rect(0.0f, 0.0f, resWidth, resHeight), new Vector2(0.5f, 0.5f));
         photoDisplayArea.sprite = photoSprite;
     }
 
