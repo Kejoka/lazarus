@@ -158,7 +158,7 @@ public class TakePhoto : MonoBehaviour
         //min / max photo distance for mammoth
         else
         {
-            if(distanceToObject > 60.0f || distanceToObject < 8.0f)
+            if(distanceToObject > 50.0f || distanceToObject < 8.0f)
             {
                 return false;
             }

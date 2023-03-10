@@ -6,6 +6,12 @@ using UnityEngine.AI;
 public class MammothAI : MonoBehaviour
 {
     [SerializeField]
+    private AudioSource mammothTrumpet;
+
+    [SerializeField]
+    private AudioSource mammothGrowl;
+
+    [SerializeField]
     private Animator animator;
 
     [SerializeField]
@@ -28,12 +34,24 @@ public class MammothAI : MonoBehaviour
 
     void Update()
     {      
-       if(Vector3.Distance(transform.position, destination) <= 1.4) //done with path
+       if(Vector3.Distance(transform.position, destination) <= 2.1) //done with path
         {
             if (!stoppedWalking)
             {
                 animator.SetTrigger("StoppedWalking");
                 stoppedWalking = true;
+            }
+
+            if (animator.GetBool("TrunkStarted"))
+            {
+                mammothTrumpet.Play();
+                animator.SetBool("TrunkStarted", false);
+            }
+
+            if (animator.GetBool("IdleStarted"))
+            {
+                mammothGrowl.Play();
+                animator.SetBool("IdleStarted", false);
             }
 
             if (animator.GetBool("IdleFinished"))
