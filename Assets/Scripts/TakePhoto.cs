@@ -33,6 +33,9 @@ public class TakePhoto : MonoBehaviour
     [SerializeField]
     private Canvas photoCanvas;
 
+      [SerializeField]
+    private Canvas endCanvas;
+
     [SerializeField]
     private Canvas questCanvas;
 
@@ -108,7 +111,7 @@ public class TakePhoto : MonoBehaviour
 
     public void TakeSnapshot()
     {
-        if (!photoCanvas.enabled && (tutCanvas == null || !tutCanvas.activeSelf))
+        if (!photoCanvas.enabled && (tutCanvas == null || !tutCanvas.activeSelf) && (endCanvas == null || !endCanvas.enabled))
         {
             // RenderTexture.active = snapCam.targetTexture;            //render from snapCam, not Main Camera
             // Texture2D snapshot = new Texture2D(resWidth, resHeight, TextureFormat.RGB24, false);
