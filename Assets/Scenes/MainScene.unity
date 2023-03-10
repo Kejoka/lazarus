@@ -2775,7 +2775,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 09f987d611ce040d3b74bb8efea02b5b, type: 2}
+      objectReference: {fileID: 9100000, guid: 62944a0a7b7c09a40948311bb15a648d, type: 2}
     - target: {fileID: 2104143470986650447, guid: 6bbc135be5966f642979265aa0183d6a,
         type: 3}
       propertyPath: m_Layer
@@ -3447,7 +3447,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 634561067}
-  m_Enabled: 0
+  m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 0.6
@@ -3469,7 +3469,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 634561067}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 711f215d5ac5a204f898b70d7d23ea81, type: 3}
   m_Name: 
@@ -5044,7 +5044,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 09f987d611ce040d3b74bb8efea02b5b, type: 2}
+      objectReference: {fileID: 9100000, guid: 62944a0a7b7c09a40948311bb15a648d, type: 2}
     - target: {fileID: 2104143470986650447, guid: 6bbc135be5966f642979265aa0183d6a,
         type: 3}
       propertyPath: m_Layer
@@ -5725,7 +5725,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793086679}
-  m_Enabled: 0
+  m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 0.6
@@ -5747,7 +5747,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793086679}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 711f215d5ac5a204f898b70d7d23ea81, type: 3}
   m_Name: 
