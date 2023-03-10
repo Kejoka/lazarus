@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.10148008, g: 0.28847134, b: 0.5377779, a: 1}
+  m_IndirectSpecularColor: {r: 0.10144256, g: 0.28835914, b: 0.53765225, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -331,8 +331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01a65cdf5260d484687912b19ec78239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mammothTrumpet: {fileID: 26414809}
-  mammothGrowl: {fileID: 26414808}
+  mammothTrumpet: {fileID: 26414808}
+  mammothGrowl: {fileID: 26414809}
   animator: {fileID: 26414810}
   navAgent: {fileID: 26414807}
   wayPoints:
