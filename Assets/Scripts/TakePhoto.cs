@@ -55,16 +55,34 @@ public class TakePhoto : MonoBehaviour
     private Collider catCollider;
 
     [SerializeField]
-    private Collider dodoCollider;
-
-    [SerializeField]
     private Transform[] mammothTargetPointList;
 
     [SerializeField]
     private Transform[] catTargetPointList;
 
     [SerializeField]
-    private Transform[] dodoTargetPointList;
+    private Collider dodoColliderOne;
+
+    [SerializeField]
+    private Transform[] dodoTargetPointOne;
+
+    [SerializeField]
+    private Collider dodoColliderTwo;
+
+    [SerializeField]
+    private Transform[] dodoTargetPointTwo;
+
+    [SerializeField]
+    private Collider dodoColliderThree;
+
+    [SerializeField]
+    private Transform[] dodoTargetPointThree;
+
+    [SerializeField]
+    private Collider dodoColliderFour;
+
+    [SerializeField]
+    private Transform[] dodoTargetPointFour;
 
     [SerializeField]
     private LayerMask layer;
@@ -131,7 +149,7 @@ public class TakePhoto : MonoBehaviour
                 questTextCat.isOn = true;
                 smilodonInfo.Play();
             }
-            else if (!questTextDodo.isOn && IsVisible(snapCam, dodoCollider, dodoTargetPointList))
+            else if (!questTextDodo.isOn && (IsVisible(snapCam, dodoColliderOne, dodoTargetPointOne) || IsVisible(snapCam, dodoColliderTwo, dodoTargetPointTwo) || IsVisible(snapCam, dodoColliderThree, dodoTargetPointThree) || IsVisible(snapCam, dodoColliderFour, dodoTargetPointFour)) )
             {
                 mammutInfo.Stop();
                 smilodonInfo.Stop();
@@ -162,9 +180,9 @@ public class TakePhoto : MonoBehaviour
         float distanceToObject = Vector3.Distance(targetCenterPosition, cameraPosition);
 
         // min / max photo distance for dodo
-        if (target == dodoCollider)
+        if (target == dodoColliderOne || target == dodoColliderTwo || target == dodoColliderThree || target == dodoColliderFour)
         {
-            if(distanceToObject > 20.0f || distanceToObject < 1.0f)
+            if(distanceToObject > 30.0f || distanceToObject < 1.0f)
             {
                 return false;
             }
@@ -172,7 +190,7 @@ public class TakePhoto : MonoBehaviour
         // min / max photo distance for cat
         else if (target == catCollider)
         {
-            if (distanceToObject > 40.0f || distanceToObject < 1.0f)
+            if (distanceToObject > 40.0f || distanceToObject < 0.5f)
             {
                 return false;
             }
@@ -180,7 +198,7 @@ public class TakePhoto : MonoBehaviour
         //min / max photo distance for mammoth
         else
         {
-            if(distanceToObject > 60.0f || distanceToObject < 8.0f)
+            if(distanceToObject > 50.0f || distanceToObject < 8.0f)
             {
                 return false;
             }
