@@ -44,17 +44,35 @@ public class TakePhoto : MonoBehaviour
     private Collider catCollider;
 
     [SerializeField]
-    private Collider dodoCollider;
-
-    [SerializeField]
     private Transform[] mammothTargetPointList;
 
     [SerializeField]
-    private Transform[] catTargetPointList;
+    private Transform[] catTargetPointList;  
+  
+    [SerializeField]
+    private Collider dodoColliderOne;
 
     [SerializeField]
-    private Transform[] dodoTargetPointList;
+    private Transform[] dodoTargetPointOne;
 
+    [SerializeField]
+    private Collider dodoColliderTwo;
+
+    [SerializeField]
+    private Transform[] dodoTargetPointTwo;
+
+    [SerializeField]
+    private Collider dodoColliderThree;
+
+    [SerializeField]
+    private Transform[] dodoTargetPointThree;
+
+    [SerializeField]
+    private Collider dodoColliderFour;
+
+    [SerializeField]
+    private Transform[] dodoTargetPointFour;
+  
     [SerializeField]
     private LayerMask layer;
 
@@ -62,7 +80,6 @@ public class TakePhoto : MonoBehaviour
     private int resHeight = 256;
 
     private Texture2D snapshot;
-    //private int screenshotNumber = 0;
   
 
     private void Awake()
@@ -79,25 +96,9 @@ public class TakePhoto : MonoBehaviour
     {
         if (cameraGrab.isGrabbed && !photoCanvas.enabled)
         {
-            /*
-            RenderTexture.active = snapCam.targetTexture;            //render from snapCam, not Main Camera
-            Texture2D snapshot = new Texture2D(resWidth, resHeight, TextureFormat.RGB24, false);
-            Rect regionToRead = new Rect(0, 0, resWidth, resHeight);
-            snapshot.ReadPixels(regionToRead, 0, 0, false);
-            snapshot.Apply();
-            */
-
-            //TODO: Kamera-Flash Sound implementieren
-
             snapshot = new Texture2D(resWidth, resHeight, TextureFormat.ARGB32, false);
             Graphics.CopyTexture(snapCam.targetTexture, snapshot);
 
-            /*
-            //png-file wird gespeichert, ist aber komplett weiß
-            byte[] byteArray = snapshot.EncodeToPNG();
-            File.WriteAllBytes(Application.persistentDataPath + "/camera" + screenshotNumber + ".png", byteArray);             
-            screenshotNumber += 1;
-            */
             if (!questTextCamera.isOn)
             {
                 questTextCamera.isOn = true;
@@ -105,18 +106,16 @@ public class TakePhoto : MonoBehaviour
             if(!questTextMammoth.isOn && IsVisible(snapCam, mammothCollider, mammothTargetPointList))
             {
                 questTextMammoth.isOn = true;
-                //TODO: Mammut-Text Soundwiedergabe implementieren
             }
             else if (!questTextCat.isOn && IsVisible(snapCam, catCollider, catTargetPointList))
             {
                 questTextCat.isOn = true;
-                //TODO: Saebelzahntiger-Text Soundwiedergabe implementieren
             }
-            else if (!questTextDodo.isOn && IsVisible(snapCam, dodoCollider, dodoTargetPointList))
+            else if (!questTextDodo.isOn && (IsVisible(snapCam, dodoColliderOne, dodoTargetPointOne) || IsVisible(snapCam, dodoColliderTwo, dodoTargetPointTwo) || IsVisible(snapCam, dodoColliderThree, dodoTargetPointThree) || IsVisible(snapCam, dodoColliderFour, dodoTargetPointFour)) )
             {
                 questTextDodo.isOn = true;
-                //TODO: Doo-Text Soundwiedergabe implementieren
             }
+
             ShowPhoto();
         }
     }
@@ -132,6 +131,7 @@ public class TakePhoto : MonoBehaviour
         photoDisplayArea.sprite = photoSprite;
     }
 
+
     public bool IsVisible(Camera c, Collider target, Transform[] rayTargetPointList)
     {
         Vector3 cameraPosition = c.transform.position;
@@ -139,17 +139,18 @@ public class TakePhoto : MonoBehaviour
         float distanceToObject = Vector3.Distance(targetCenterPosition, cameraPosition);
 
         // min / max photo distance for dodo
-        if (target == dodoCollider)
+        if (target == dodoColliderOne || target == dodoColliderTwo || target == dodoColliderThree || target == dodoColliderFour)
         {
-            if(distanceToObject > 20.0f || distanceToObject < 1.0f)
+            if (distanceToObject > 30.0f || distanceToObject < 1.0f)
             {
                 return false;
             }
         }
+        
         // min / max photo distance for cat
         else if (target == catCollider)
         {
-            if (distanceToObject > 40.0f || distanceToObject < 1.0f)
+            if (distanceToObject > 40.0f || distanceToObject < 0.5f)
             {
                 return false;
             }
@@ -172,9 +173,8 @@ public class TakePhoto : MonoBehaviour
                 return false;
             }
         }
-        
+
         //check if target points are really visible (not hidden behind other objects/terrain)
-        
         RaycastHit hit;
 
         foreach (Transform targetPoint in rayTargetPointList)
@@ -186,10 +186,11 @@ public class TakePhoto : MonoBehaviour
                 {
                     return false;
                 }
-                
+
             }
         }
-        return true;   
-
+        return true;
     }
+    
+    
 }

@@ -17,6 +17,9 @@ public class DodoAI : MonoBehaviour
     [SerializeField]
     private Transform centrePoint;
 
+    [SerializeField]
+    private AudioSource dodoSound;
+
     private bool stoppedWalking = false;
 
     void Start()
@@ -33,6 +36,7 @@ public class DodoAI : MonoBehaviour
             {
                 animator.SetTrigger("StoppedWalking");
                 stoppedWalking = true;
+                dodoSound.Play();
             }
 
             if (animator.GetBool("IdleFinished"))
