@@ -26,10 +26,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AO: 0.35714284
-    - _BaseLight: 0.53571427
-    - _Cutoff: 0.5517857
-    - _Occlusion: 0.71428573
+    - _AO: 0
+    - _BaseLight: 0.281
+    - _Cutoff: 0.25
+    - _Occlusion: 0
     - _SquashAmount: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
