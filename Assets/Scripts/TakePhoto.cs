@@ -93,10 +93,10 @@ public class TakePhoto : MonoBehaviour
     [SerializeField]
     private GameObject tutCanvas;
 
-    private int resWidth = 256;
-    private int resHeight = 256;
+    // private int resWidth = 256;
+    // private int resHeight = 256;
     private Texture2D snapshot;
-    private int screenshotNumber = 0;
+    // private int screenshotNumber = 0;
 
     // DEBUG
     //  IEnumerator ExecuteAfterTime()
