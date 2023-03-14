@@ -93,9 +93,10 @@ public class TakePhoto : MonoBehaviour
     [SerializeField]
     private GameObject tutCanvas;
 
+    private Texture2D snapshot;
+    // Variables that are needed for method 1 + 2
     // private int resWidth = 256;
     // private int resHeight = 256;
-    private Texture2D snapshot;
     // private int screenshotNumber = 0;
 
     // DEBUG
@@ -113,23 +114,27 @@ public class TakePhoto : MonoBehaviour
     {
         if (!photoCanvas.enabled && (tutCanvas == null || !tutCanvas.activeSelf) && (endCanvas == null || !endCanvas.enabled))
         {
+            // Method 1: Use ReadPixels() and work with byteArray -> results in white image on disk and in unity on windows
+            // On OSX the image that is saved to the Disk is fine but Unity still only shows a white image
             // RenderTexture.active = snapCam.targetTexture;            //render from snapCam, not Main Camera
             // Texture2D snapshot = new Texture2D(resWidth, resHeight, TextureFormat.RGB24, false);
             // Rect regionToRead = new Rect(0, 0, resWidth, resHeight);
             // snapshot.ReadPixels(regionToRead, 0, 0, false);
             // snapshot.Apply();
+            // png-file wird gespeichert, ist aber komplett wei�
+            // byte[] byteArray = snapshot.EncodeToPNG();
+            // File.WriteAllBytes(Application.persistentDataPath + "/camera" + screenshotNumber + ".png", byteArray);             
+            // screenshotNumber += 1;
 
-            cameraClick.Play();
-            snapCam.enabled = false;
+            // Method 2: Use CopyTexture() -> results in transparent vegetation in shown image if said vegetation has nothign but the skybox in the background
             // snapshot = new Texture2D(resWidth, resHeight, TextureFormat.ARGB32, false);
             // Graphics.CopyTexture(snapCam.targetTexture, snapshot);
 
-            /*
-            //png-file wird gespeichert, ist aber komplett wei�
-            byte[] byteArray = snapshot.EncodeToPNG();
-            File.WriteAllBytes(Application.persistentDataPath + "/camera" + screenshotNumber + ".png", byteArray);             
-            screenshotNumber += 1;
-            */
+            // Method 3: Works but is just a workaround instead of the functionality that is technically needed for an image gallery
+            cameraClick.Play();
+            snapCam.enabled = false;
+
+
             if (!questTextCamera.isOn)
             {
                 questTextCamera.isOn = true;
@@ -172,6 +177,7 @@ public class TakePhoto : MonoBehaviour
         {
             questCanvas.enabled = false;
         }
+        // Part of method 1 and 2. photoDisplayArea must be an Image instead of a RawImage for this to work
         // Sprite photoSprite = Sprite.Create(snapshot, new Rect(0.0f, 0.0f, resWidth, resHeight), new Vector2(0.5f, 0.5f));
         // photoDisplayArea.texture = snapshot;
     }
