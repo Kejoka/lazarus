@@ -177,7 +177,7 @@ public class TakePhoto : MonoBehaviour
         {
             questCanvas.enabled = false;
         }
-        // Part of method 1 and 2. photoDisplayArea must be an Image instead of a RawImage for this to work
+        // Part of method 1 and 2. photoDisplayArea must be an Image instead of a RawImage for this to workx
         // Sprite photoSprite = Sprite.Create(snapshot, new Rect(0.0f, 0.0f, resWidth, resHeight), new Vector2(0.5f, 0.5f));
         // photoDisplayArea.texture = snapshot;
     }
