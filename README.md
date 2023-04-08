@@ -12,8 +12,9 @@ Tested and developed on Meta Quest 2.
 
 1. Import project in Unity Hub
 2. Open project
-3. Switch Target Platform to Android 
-4. Go to Build Settings
-5. Enable Development Build
-6. Connect your vr headset
-7. Patch and Run
+3. Open Main Scene (/Assets/Scenes/MainScene)
+4. Switch Target Platform to Android 
+5. Go to Build Settings
+6. Enable Development Build
+7. Connect your vr headset
+8. Patch and Run
