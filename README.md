@@ -1,7 +1,7 @@
-# Project Lazarus: Extinct animal species in VR
+# Project Lazarus: Explore extinct animal species in VR
 
 
-Discover three extinct animal species in this Open World VR game. Find the camera, take photos and explore!
+Discover three extinct animal species in this Open World VR game. Find the camera and take photos to reveal informations about the animals.
 Tested and developed on Meta Quest 2.
 
 ## Gameplay video
